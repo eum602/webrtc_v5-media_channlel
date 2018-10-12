@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>eum602-webRTC</title>
+    <link rel="stylesheet" href="styles.css">
+            <html lang="eng">
+    <script src="/socket.io/socket.io.js" ></script>    
+</head>
+<body>    
+    <video id="myVideoTag" autoplay></video>
+    <video id="theirVideoTag" autoplay></video>
+    <div>
+        <label>Video</label>
+        <input type="checkbox" id="videoSelect"/>
+        <label>Audio</label>
+        <input type="checkbox" id="audioSelect"/>                
+    </div>
+    <div>
+        <input type="file" id="sendFile"/><br/>
+        <progress id="fileProgress" value="1" max="100"></progress>
+        <a id="receivedFileLink"></a>
+        <hr/>
+    </div>
+    <div>
+        <button id="startButton">Start</button>
+        <button id="callButton">Call</button>
+        <button id="hangupButton">Hang Up</button>
+        <br>
+      </div>
+    <div>
+        <label>Your name</label>  <input  id="myName" type="text"/>
+        <label>Message</label>    <input id="myMessage" type="text" />
+        <input  id="sendMessage" type="submit"/><br/><br/>      
+        <div id="chatArea">Message Output:</div>
+        <br>
+        <div id="signalingArea">Signaling Messages:</div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
